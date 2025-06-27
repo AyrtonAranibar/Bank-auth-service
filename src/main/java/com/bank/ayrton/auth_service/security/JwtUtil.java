@@ -11,8 +11,8 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    private static final String SECRET_KEY = "CDFD54BE9758745B57BC1BEDF52C18CA3BE"; //
-    private static final long EXPIRATION_TIME_MS = 1000 * 60 * 60 * 2; //
+    private static final String SECRET_KEY = "CDFD54BE9758745B57BC1BEDF52C18CA3BE"; // clave JWT para verificar y generar tokens
+    private static final long EXPIRATION_TIME_MS = 1000 * 60 * 20; // tiene un tiempo de 20 minutos
 
     public String generateToken(String username, String role) {
         return Jwts.builder()
